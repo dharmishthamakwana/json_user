@@ -44,12 +44,6 @@ class _PostScreenState extends State<PostScreen> {
         ),
         body: Column(
           children: [
-            // ElevatedButton(
-            //   onPressed: () {
-            //     postProviderFalse!.jsonParsing();
-            //   },
-            //   child: Text("Save data"),
-            // ),
             Expanded(
               child: ListView.builder(
                 itemBuilder: (context, index) {
