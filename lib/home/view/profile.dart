@@ -1,74 +1,83 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 
 import '../provider/profile_provider.dart';
 
-class PostScreen extends StatefulWidget {
-  const PostScreen({Key? key}) : super(key: key);
+class Userscreen extends StatefulWidget {
+  const Userscreen({Key? key}) : super(key: key);
 
   @override
-  State<PostScreen> createState() => _PostScreenState();
+  State<Userscreen> createState() => _UserscreenState();
 }
 
-class _PostScreenState extends State<PostScreen> {
-  UserProvider? userProviderTrue;
-  UserProvider? userProviderFalse;
-
-  @override
-  void initState() {
-    super.initState();
-    Provider.of<UserProvider>(context, listen: false).jsonParsing();
-  }
-
+class _UserscreenState extends State<Userscreen> {
   @override
   Widget build(BuildContext context) {
-    userProviderFalse = Provider.of<UserProvider>(context, listen: false);
-    userProviderTrue = Provider.of<UserProvider>(context, listen: true);
+    Userprovider? userproviderTrue = Provider.of(context, listen: true);
+    Userprovider? userproviderFalse = Provider.of(context, listen: false);
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          backgroundColor: Colors.grey.shade900,
-          bottomOpacity: 5,
-          elevation: 0,
-          centerTitle: true,
-          title: Text(
-            "User Data json",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        body: Column(
+        // appBar: AppBar(
+        //     backgroundColor: Colors.blue.shade900,
+        //     title: Text(
+        //       "User",
+        //       style:
+        //           TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+        //     ),
+        //     actions: [
+        //       IconButton(
+        //           onPressed: () {
+        //             Navigator.pushNamed(context, 'comment');
+        //           },
+        //           icon: Icon(Icons.navigate_next)),
+        //     ]),
+        backgroundColor: Colors.blue.shade50,
+        body: Stack(
           children: [
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 80,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(4)),
-                    margin: EdgeInsets.all(10),
-                    child: ListTile(
-                      leading: Text(
-                          "${userProviderTrue!.profiletList[index]['id']}"),
-                      title: Text(
-                          "${userProviderTrue!.profiletList[index]['name']}"),
-                      subtitle: Text(
-                          "${userProviderTrue!.profiletList[index]['username']}"),
-                      trailing: Text(
-                          "${userProviderTrue!.profiletList[index]['phone']}"),
+            ListView.builder(
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  shape: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
                     ),
-                  );
-                },
-                itemCount: userProviderTrue!.profiletList.length,
+                  ),
+                  leading: Text(
+                    "${userproviderTrue.userList[index]["id"]}",
+                  ),
+                  title: Text(
+                    "${userproviderTrue.userList[index]["name"]}",
+                  ),
+                  subtitle: Text(
+                    "${userproviderTrue.userList[index]["phone"]}",
+                  ),
+                  trailing: Text(
+                    "${userproviderTrue.userList[index]["email"]}",
+                  ),
+                ),
               ),
-            )
+              itemCount: userproviderTrue!.userList.length,
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade900),
+                  onPressed: () {
+                    userproviderFalse!.jsomParshing();
+                  },
+                  child: Text(
+                    "user",
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
