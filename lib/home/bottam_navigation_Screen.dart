@@ -29,7 +29,11 @@ class _BottamScreenState extends State<BottamScreen> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blueGrey.shade900,
-            title: Text("Json Parsing",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 1)),
+            title: Text("Json Parsing",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1)),
             bottom: TabBar(
               tabs: [
                 Tab(
@@ -56,9 +60,9 @@ class _BottamScreenState extends State<BottamScreen> {
                   child: Text(
                     'comment',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 11,fontWeight: FontWeight.bold
-                    ),
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
                 Tab(
@@ -109,46 +113,7 @@ class _BottamScreenState extends State<BottamScreen> {
               Photoscreen(),
               Todoscreen(),
             ],
-            // body:
-            // bottamProviderTrue!.screenList[bottamProviderTrue!.navigationIndex],
-            // bottomNavigationBar: BottomNavigationBar(
-            //   selectedLabelStyle: TextStyle(
-            //     color: Colors.white,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            //   // unselectedLabelStyle: TextStyle(color: Colors.white),
-            //   currentIndex: bottamProviderTrue!.navigationIndex,
-            //   // showSelectedLabels: true,
-            //   onTap: (value) {
-            //     bottamProviderFalse!.changeIndex(value);
-            //   },
-            //   items: [
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.post_add_outlined, color: Colors.white),
-            //         label: "Post",
-            //         backgroundColor: Colors.blueGrey.shade900),
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.supervised_user_circle, color: Colors.white),
-            //         label: "User",
-            //         backgroundColor: Colors.blue.shade900),
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.comment, color: Colors.white),
-            //         label: "Comment",
-            //         backgroundColor: Colors.blueGrey.shade900),
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.album, color: Colors.white),
-            //         label: "Album",
-            //         backgroundColor: Colors.blue.shade900),
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.today, color: Colors.white),
-            //         label: "Photos",
-            //         backgroundColor: Colors.blueGrey.shade900),
-            //     BottomNavigationBarItem(
-            //         icon: Icon(Icons.photo, color: Colors.white),
-            //         label: "Todos",
-            //         backgroundColor: Colors.blue.shade900),
-            //   ],
-            // ),
+           
           ),
         ),
       ),
