@@ -12,15 +12,15 @@ class Todoscreen extends StatefulWidget {
 
 class _TodoscreenState extends State<Todoscreen> {
   Todoprovider? todoproviderTrue;
+  Todoprovider? todoProviderFalse;
 
   @override
   Widget build(BuildContext context) {
-    todoproviderTrue = Provider.of(context, listen: true);
-    Todoprovider todoproviderFalse = Provider.of(context, listen: false);
+    todoproviderTrue = Provider.of<Todoprovider>(context, listen: true);
+    todoProviderFalse = Provider.of<Todoprovider>(context, listen: false);
 
     return SafeArea(
       child: Scaffold(
-       
         backgroundColor: Colors.blue.shade50,
         body: Stack(
           children: [
@@ -29,7 +29,9 @@ class _TodoscreenState extends State<Todoscreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   shape: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black)),
+                      borderSide: BorderSide(
+                    color: Colors.black,
+                  )),
                   leading: Text("${todoproviderTrue!.todoList[index].id}"),
                   trailing: Text("${todoproviderTrue!.todoList[index].userId}"),
                   title: Text("${todoproviderTrue!.todoList[index].title}"),
@@ -44,9 +46,10 @@ class _TodoscreenState extends State<Todoscreen> {
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade900),
                   onPressed: () {
-                    todoproviderFalse!.todoJsonParshing();
+                    todoProviderFalse!.todoJsonParshing();
                   },
                   child: Text(
                     "todo",
