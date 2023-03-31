@@ -23,20 +23,7 @@ class _CommentscreenState extends State<Commentscreen> {
     return SafeArea(
       child: Scaffold(
 
-        // appBar: AppBar(
-        //   backgroundColor: Colors.blueGrey.shade900,
-        //   title: Text(
-        //     "Comment",
-        //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
-        //   ),
-        //   actions: [
-        //     IconButton(
-        //         onPressed: () {
-        //           Navigator.pushNamed(context, 'todo');
-        //         },
-        //         icon: Icon(Icons.navigate_next)),
-        //   ],
-        // ),
+
         backgroundColor: Colors.blueGrey.shade100,
         body: Stack(
           children: [

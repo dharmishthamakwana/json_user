@@ -29,20 +29,7 @@ class _PostscreenState extends State<Postscreen> {
 
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.blueGrey.shade900,
-        //   title: Text(
-        //     "Post",
-        //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
-        //   ),
-        //   actions: [
-        //     IconButton(
-        //         onPressed: () {
-        //           Navigator.pushNamed(context, 'user');
-        //         },
-        //         icon: Icon(Icons.navigate_next_sharp))
-        //   ],
-        // ),
+
         backgroundColor: Colors.blueGrey.shade50,
         body: Stack(
           children: [

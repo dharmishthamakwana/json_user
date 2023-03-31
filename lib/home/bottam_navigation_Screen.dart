@@ -113,7 +113,7 @@ class _BottamScreenState extends State<BottamScreen> {
               Photoscreen(),
               Todoscreen(),
             ],
-           
+
           ),
         ),
       ),

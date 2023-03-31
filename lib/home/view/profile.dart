@@ -19,20 +19,7 @@ class _UserscreenState extends State<Userscreen> {
 
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //     backgroundColor: Colors.blue.shade900,
-        //     title: Text(
-        //       "User",
-        //       style:
-        //           TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
-        //     ),
-        //     actions: [
-        //       IconButton(
-        //           onPressed: () {
-        //             Navigator.pushNamed(context, 'comment');
-        //           },
-        //           icon: Icon(Icons.navigate_next)),
-        //     ]),
+        //
         backgroundColor: Colors.blue.shade50,
         body: Stack(
           children: [

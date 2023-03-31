@@ -22,23 +22,7 @@ class _PhotoscreenState extends State<Photoscreen> {
 
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.blueGrey.shade900,
-        //   title: Text(
-        //     "Photos",
-        //     style: TextStyle(
-        //       color: Colors.white,
-        //       fontWeight: FontWeight.w500,
-        //     ),
-        //   ),
-        //   actions: [
-        //     IconButton(
-        //         onPressed: () {
-        //           Navigator.pushNamed(context, 'album');
-        //         },
-        //         icon: Icon(Icons.navigate_next)),
-        //   ],
-        // ),
+
         backgroundColor: Colors.blueGrey.shade50,
         body: Stack(
           children: [

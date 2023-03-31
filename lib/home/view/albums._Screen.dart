@@ -22,20 +22,7 @@ class _AlbumscreenState extends State<Albumscreen> {
 
     return SafeArea(
       child: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.blue.shade900,
-        //   title: Text(
-        //     "Albums",
-        //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
-        //   ),
-        //   actions: [
-        //     IconButton(
-        //         onPressed: () {
-        //           Navigator.pushNamed(context, '/');
-        //         },
-        //         icon: Icon(Icons.navigate_next)),
-        //   ],
-        // ),
+
         backgroundColor: Colors.blue.shade50,
         body: Stack(
           children: [
